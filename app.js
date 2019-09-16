@@ -17,6 +17,13 @@ app.get('/', (req, res) => {
   res.render('landing')
 })
 
-app.get('/camping', (req, res) => {
-  res.render('camping')
+app.get('/campgrounds', (req, res) => {
+  let campgrounds = [{
+    name: 'Salmon Creek',
+    image: 'https:pixabay.com/get/52e3d3404a55af14f6da8c7dda793f7f1636dfe2564c704c73277ed69348c459_340.png'
+  }]
+  //pass the campgrounds array as an object in the res.render method
+  res.render('campgrounds', {
+    campgrounds: campgrounds
+  })
 })

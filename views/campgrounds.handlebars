@@ -1,10 +1,22 @@
-<h1>Camping</h1>
+<header class="jumbotron">
+  <div class="container">
+    <h1>Welcome to YelpCamp</h1>
+    <p>View our handpicked campgrounds</p>
+    <p>
+      <a class="btn btn-primary btn-large" href="/campgrounds/new">Add new camgrounds</a>
+    </p>
+  </div>
+</header>
 
-
-{{#each campgrounds}}
-<p>name: {{name}}</p>
-<img src="{{image}}" /> {{/each}}
-
-<div>
-  <a href="/campgrounds/new">Add new camgrounds</a>
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Our most reputable camgrounds</h3>
+  </div>
+  <div class="col-md-3 col-md-6">
+    {{#each campgrounds}}
+    <p>name: {{name}}</p>
+    <div class="thumbnail">
+      <img src="{{image}}" />
+    </div> {{/each}}
+  </div>
 </div>
